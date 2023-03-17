@@ -7,7 +7,7 @@ i = 0                                                       # i is the octave nu
 a = 0                                                       # a is later used to correctly iterate over the MIDI values
 notation = []                                               # list of tuple containing note names: (note,octave)
 notes = notes * 8                                           # overall range is about 8 octaves
-midi_note = [n for n in range(21, 109)]                     # notes in MIDI values. A0 is 21; C8 is 108
+midi_note = [n for n in range(21, 109)]                     # notes in MIDI values. Start: A0 is 21; End: C8 is 108
 
 for note in notes:
     z = midi_note[notes.index(note)]

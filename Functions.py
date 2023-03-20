@@ -13,7 +13,8 @@ def select_instrument(section, instrument):                             # select
 
 def get_range(section, instrument):                                     # get instrument range
     current_instr = Instruments.all_instruments[section][instrument]
-    current_range = current_instr["Range"]
+    current_range = current_instr["Range"].split(" - ")
+
     return current_range
 
 
@@ -33,3 +34,8 @@ def get_transposition(section, instrument):                             # get in
     current_instr = Instruments.all_instruments[section][instrument]
     current_transposition = current_instr["Transposition"]
     return current_transposition
+
+
+def get_section(section):
+    current_section = Instruments.all_instruments[section]
+    return current_section

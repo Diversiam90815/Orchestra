@@ -11,25 +11,33 @@ midi_note = [n for n in range(21, 109)]                     # notes in MIDI valu
 
 for note in notes:
     z = midi_note[notes.index(note)]
-    if note == "C":
+    if note == "C":                                         # Octave count i starts at each instance of note C
         i += 1
-    if note == "A":
+    if note == "A":                                         # a is counting up everytime [notes] is iterated
         a += 1
-    if a > 1:
+    if a > 1:                                               # so the MIDI values continue counting and don't restart
         z = int(z) + (a-1) * 12
     notation.append((z, note, i))                           # Notation is a tuple (MIDI Note, Note Name, Octave)
-    if i == 8:
+    if i == 8:                                              # total range is from octave 1 to C8 (octave 8)
         break
 
 
 def get_note(note, octave):                                 # retrieve the MIDI note value in notation
-    y = 0
-    for y in range(len(notation)):
-        if notation[y][1] == note and notation[y][2] == octave:
-            return y
+    y = 0                                                   # y is the list index
+    for y in range(len(notation)):                          # list gets searched for match
+        if notation[y][1] == note \
+                and notation[y][2] == octave:               # input note/octave is going through the list until matched
+            return y                                        # the searched note is at position y in notation
 
 
 def return_note_value(note, octave):
-    ind = get_note(note, octave)
-    z = notation[ind]
+    ind = get_note(note, octave)                            # position of the searched note is being called
+    z = notation[ind]                                       # the note at position ind (before:y) is being called
     return z
+
+
+def show_note(y):
+    if y == notation[y]:
+        n = notation[y][1]
+        o = notation[y][2]
+        return n, o

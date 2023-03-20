@@ -16,6 +16,13 @@ all_instruments = {
                 {
                     "Range": f'{ret("G", 3)} - {ret("A", 7)}',
                     "Tuning": "G-D-A-E",
+                    "Qualities":
+                        {
+                            f'String {ret("G", 3)}': "dark, a bit unfocused",
+                            f'String {ret("C", 4)}': "deep and solid",
+                            f'String {ret("G", 5)}': "bright & heroic",
+                            f'String {ret("C", 6)}': "brilliant & loud"
+                        },
                     "Transposition": "None",
                     "Roles": "1st Violin: Melody; "
                              "2nd Violin: supporting Harmony"
@@ -25,6 +32,13 @@ all_instruments = {
                 {
                     "Range": f'{ret("C", 3)} - {ret("E", 6)}',
                     "Tuning": "C-G-D-A",
+                    "Qualities":
+                        {
+                            f'String {ret("G", 3)}': "dark, a bit unfocused",
+                            f'String {ret("C", 4)}': "deep and solid",
+                            f'String {ret("G", 5)}': "bright & heroic",
+                            f'String {ret("C", 6)}': "brilliant & loud"
+                        },
                     "Transposition": "None",
                     "Roles": "often used to double the bassline or "
                              "fill the harmony in the center(often coupling 2nd Violins)"
@@ -34,6 +48,13 @@ all_instruments = {
                 {
                     "Range": f'{ret("C", 2)} - {ret("C", 6)}',
                     "Tuning": "C-G-D-A",
+                    "Qualities":
+                        {
+                            f'String {ret("G", 3)}': "dark, a bit unfocused",
+                            f'String {ret("C", 4)}': "deep and solid",
+                            f'String {ret("G", 5)}': "bright & heroic",
+                            f'String {ret("C", 6)}': "brilliant & loud"
+                        },
                     "Transposition": "None",
                     "Roles": "often doubled with: bassoon, double bass, horns, clarinet, trombone, tuba "
                              "or pizz. cello with Timpani"
@@ -44,6 +65,13 @@ all_instruments = {
                     "Range": f'{ret("E", 2)} - {ret("C", 5)}, '
                              f'(with C-extension: {ret("C", 2)} - {ret("C", 5)}',
                     "Tuning": "E-A-D-G",
+                    "Qualities":
+                        {
+                            f'String {ret("G", 3)}': "dark, a bit unfocused",
+                            f'String {ret("C", 4)}': "deep and solid",
+                            f'String {ret("G", 5)}': "bright & heroic",
+                            f'String {ret("C", 6)}': "brilliant & loud"
+                        },
                     "Transposition": f'One octave lower {ret("E", 1)} - {ret("C", 4)}',
                     "Roles": "often identical to Cello part (esp. mid 18th century)"
                 }

@@ -2,7 +2,6 @@ import Functions
 import Instruments
 import pandas as pd
 import matplotlib.pyplot as plt
-import Additional_Functions
 
 ## getting a list of tuples including the section name, instrument name and range in MIDI notation
 

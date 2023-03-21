@@ -1,4 +1,5 @@
-from Additional_Functions import return_note_value as ret
+from Additional_Functions import return_note as ret
+from Additional_Functions import return_midi_note as retM
 '''
 This is a collection of all instruments of a typical symphonic orchestra. This is a CIP (continual improvement process),
 which means instruments will be added over time as this project grows. 
@@ -15,6 +16,8 @@ all_instruments = {
             "violin":
                 {
                     "Range": f'{ret("G", 3)} - {ret("A", 7)}',
+                    "RangeM_low": f'{retM("G", 3)}',
+                    "RangeM_high": f'{retM("A", 7)}',
                     "Tuning": "G-D-A-E",
                     "Qualities":
                         {
@@ -31,6 +34,8 @@ all_instruments = {
             "viola":
                 {
                     "Range": f'{ret("C", 3)} - {ret("E", 6)}',
+                    "RangeM_low": f'{retM("C", 3)}',
+                    "RangeM_high": f'{retM("E", 6)}',
                     "Tuning": "C-G-D-A",
                     "Qualities":
                         {
@@ -47,6 +52,8 @@ all_instruments = {
             "violoncello":
                 {
                     "Range": f'{ret("C", 2)} - {ret("C", 6)}',
+                    "RangeM_low": f'{retM("C", 2)}',
+                    "RangeM_high": f'{retM("C", 6)}',
                     "Tuning": "C-G-D-A",
                     "Qualities":
                         {
@@ -63,7 +70,9 @@ all_instruments = {
             "double_bass":
                 {
                     "Range": f'{ret("E", 2)} - {ret("C", 5)}, '
-                             f'(with C-extension: {ret("C", 2)} - {ret("C", 5)}',
+                             f'(with C-extension: {ret("C", 2)} - {ret("C", 5)})',
+                    "RangeM_low": f'{retM("C", 2)}',
+                    "RangeM_high": f'{retM("C", 5)}',
                     "Tuning": "E-A-D-G",
                     "Qualities":
                         {
@@ -82,6 +91,8 @@ all_instruments = {
             "french_horn":
                 {
                     "Range": f'{ret("F#", 2)} - {ret("C", 6)}',
+                    "RangeM_low": f'{retM("F#", 2)}',
+                    "RangeM_high": f'{retM("C", 6)}',
                     "Qualities":
                         {
                             f'{ret("C", 3)} - {ret("G", 3)}': "dark, a bit unfocused",
@@ -98,6 +109,8 @@ all_instruments = {
             "trumpet":
                 {
                     "Range": f'{ret("F#", 3)} - {ret("D", 6)}',
+                    "RangeM_low": f'{retM("F#", 3)}',
+                    "RangeM_high": f'{retM("D", 6)}',
                     "Qualities":
                         {
                             f'{ret("F#", 3)} - {ret("B", 3)}': "rather dull",
@@ -113,6 +126,8 @@ all_instruments = {
             "tenor_trombone":
                 {
                     "Range": f'{ret("E", 2)} - {ret("A#", 4)}',
+                    "RangeM_low": f'{retM("E", 2)}',
+                    "RangeM_high": f'{retM("A#", 4)}',
                     "Qualities":
                         {
                             f'{ret("E", 2)} - {ret("G", 2)}': "dark, less strong",
@@ -129,6 +144,8 @@ all_instruments = {
             "bass_trombone":
                 {
                     "Range": f'{ret("A#", 1)} - {ret("A#", 4)}',
+                    "RangeM_low": f'{retM("A#", 1)}',
+                    "RangeM_high": f'{retM("A#", 4)}',
                     "Qualities":
                         {
                             f'{ret("A#", 1)} - {ret("F", 2)}': "heavy & quite strong",
@@ -144,6 +161,8 @@ all_instruments = {
             "cimbasso":
                 {
                     "Range": f'{ret("F", 1)} - {ret("F", 4)}',
+                    "RangeM_low": f'{retM("F", 1)}',
+                    "RangeM_high": f'{retM("F", 4)}',
                     "Qualities":
                         {
                             f'{ret("F", 1)} - {ret("G", 2)}': "full, clear, concise",
@@ -159,6 +178,8 @@ all_instruments = {
             "tuba":
                 {
                     "Range": f'{ret("D", 1)} - {ret("G", 4)}',
+                    "RangeM_low": f'{retM("D", 1)}',
+                    "RangeM_high": f'{retM("G", 4)}',
                     "Qualities":
                         {
                             f'{ret("D", 1)} - {ret("A#", 1)}': "deep & heavy",
@@ -178,6 +199,8 @@ all_instruments = {
             "piccolo":
                 {
                     "Range": f'{ret("D", 4)} - {ret("C", 7)}',
+                    "RangeM_low": f'{retM("D", 4)}',
+                    "RangeM_high": f'{retM("C", 7)}',
                     "Qualities":
                         {
                             f'{ret("D", 4)} - {ret("G", 4)}': "quiet, hauntingly hallow",
@@ -192,6 +215,8 @@ all_instruments = {
             "flute":
                 {
                     "Range": f'{ret("C", 4)} - {ret("D", 7)}',
+                    "RangeM_low": f'{retM("C", 4)}',
+                    "RangeM_high": f'{retM("D", 7)}',
                     "Qualities":
                         {
                             f'{ret("C", 4)} - {ret("G", 4)}': "weak, but lucious",
@@ -206,6 +231,8 @@ all_instruments = {
             "oboe":
                 {
                     "Range": f'{ret("A#", 3)} - {ret("A", 6)}',
+                    "RangeM_low": f'{retM("A#", 3)}',
+                    "RangeM_high": f'{retM("A", 6)}',
                     "Qualities":
                         {
                             f'{ret("A#", 3)} - {ret("F", 4)}': "thick, heavy",
@@ -221,6 +248,8 @@ all_instruments = {
             "cor_anglais":
                 {
                     "Range": f'{ret("B", 3)} - {ret("G", 6)}',
+                    "RangeM_low": f'{retM("B", 3)}',
+                    "RangeM_high": f'{retM("G", 6)}',
                     "Qualities":
                         {
                             f'{ret("B", 3)} - {ret("G", 4)}': "deep, rich, intense",
@@ -235,6 +264,8 @@ all_instruments = {
             "clarinet":
                 {
                     "Range": f'{ret("E", 3)} - {ret("C", 7)}',
+                    "RangeM_low": f'{retM("E", 3)}',
+                    "RangeM_high": f'{retM("C", 7)}',
                     "Qualities":
                         {
                             f'{ret("E", 3)} - {ret("F#", 4)}': "Chalumeau Register: deep & rich",
@@ -254,6 +285,8 @@ all_instruments = {
             "bass_clarinet":
                 {
                     "Range": f'{ret("D#", 3)} - {ret("G", 6)}',
+                    "RangeM_low": f'{retM("D#", 3)}',
+                    "RangeM_high": f'{retM("G", 6)}',
                     "Qualities":
                         {
                             f'{ret("D#", 3)} - {ret("G", 3)}': "Chalumeau Register, mysterious, shadowy, sinister",
@@ -269,6 +302,8 @@ all_instruments = {
             "bassoon":
                 {
                     "Range": f'{ret("A#", 1)} - {ret("D#", 5)}',
+                    "RangeM_low": f'{retM("A#", 1)}',
+                    "RangeM_high": f'{retM("D#", 5)}',
                     "Qualities":
                         {
                             f'{ret("A#", 1)} - {ret("G", 2)}': "sonorous, dark, vibrant",
@@ -284,6 +319,8 @@ all_instruments = {
             "contrabassoon":
                 {
                     "Range": f'{ret("A#", 1)} - {ret("A#", 4)}',
+                    "RangeM_low": f'{retM("A#", 1)}',
+                    "RangeM_high": f'{retM("A#", 4)}',
                     "Qualities": f'similar characteristics as the bassoon, but slower more stubborn '
                                  f'and resistant in the lows; '
                                  f'most effective range is its lowest 12th: {ret("A#", 1)} - {ret("F", 3)}',

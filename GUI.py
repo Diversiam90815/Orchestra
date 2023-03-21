@@ -5,20 +5,28 @@ from tkinter import ttk
 
 root = tk.Tk()
 
+root.geometry('1600x900')
+root.title('The Orchestra')
+root.grid()
+
+
 instr = tk.Frame(root)
 instr.grid()
 
 txw = 60                            # setting the text box width
 txh = 10                            # setting the text box height
 
+style = ttk.Style()
+
+
 range_info = ttk.Label(instr, text="Range")
 range_info.grid(row=0, column=0, sticky="nswe")
-range_of_instr = tk.Text(instr, height=txh, width=txw)
+range_of_instr = tk.Text(instr, height=txh*0.5, width=txw)
 range_of_instr.grid(row=1, column=0)
 
 transp_info = ttk.Label(instr, text="Transposition")
 transp_info.grid(row=0, column=1, sticky="nswe")
-transp_info_instr = tk.Text(instr, height=txh, width=txw)
+transp_info_instr = tk.Text(instr, height=txh*0.5, width=txw)
 transp_info_instr.grid(row=1, column=1)
 
 qual_info = ttk.Label(instr, text="Qualities")
@@ -35,22 +43,23 @@ roles_info_instr.grid(row=3, column=1)
 def set_entries(range, qualities, transposition, roles):
 
     range_of_instr.config(state='normal')               # enable write mode on text widget
-    range_of_instr.delete(1.0, tk.END)                  # delete previous entry, if there is one
+    range_of_instr.delete(0.0, tk.END)                  # delete previous entry, if there is one
     range_of_instr.insert(tk.END, range)                # set new entry from input
     range_of_instr.config(state='disabled')             # and disable write mode -> read only
 
     qual_info_instr.config(state='normal')              # with all entries
-    qual_info_instr.delete(1.0, tk.END)
-    qual_info_instr.insert(tk.END, qualities)
+    qual_info_instr.delete(0.0, tk.END)
+    for quality in qualities:                           # qualities is a list, which has to be treated differently
+        qual_info_instr.insert(tk.END, quality)
     qual_info_instr.config(state='disabled')
 
     transp_info_instr.config(state='normal')
-    transp_info_instr.delete(1.0, tk.END)
+    transp_info_instr.delete(0.0, tk.END)
     transp_info_instr.insert(tk.END, transposition)
     transp_info_instr.config(state='disabled')
 
     roles_info_instr.config(state='normal')
-    roles_info_instr.delete(1.0, tk.END)
+    roles_info_instr.delete(0.0, tk.END)
     roles_info_instr.insert(tk.END, roles)
     roles_info_instr.config(state='disabled')
 
@@ -216,10 +225,6 @@ def tuba_data():
 
     set_entries(range, qualities, transposition, roles)
 
-
-root.geometry('1600x900')
-root.title('The Orchestra')
-root.grid()
 
 menubar = tk.Menu(root)
 menu1 = tk.Menu(tearoff=0)

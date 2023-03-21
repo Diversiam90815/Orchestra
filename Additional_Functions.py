@@ -30,14 +30,22 @@ def get_note(note, octave):                                 # retrieve the MIDI 
             return y                                        # the searched note is at position y in notation
 
 
-def return_note_value(note, octave):
+def return_note(note, octave):                              # function to return only the note name and the corresponding octave
+    asd = get_note(note, octave)                            # gets the MIDI value using previous function
+    note1 = notation[asd]                                   # access the note at that spot
+    n = note1[1]                                            # n stands for the corresponding note
+    o = note1[2]                                            # o stands for the corresponding octave
+    return f'{n}{o}'
+
+
+def return_note_value(note, octave):                        # same function as above, but preserving the MIDI note value
     ind = get_note(note, octave)                            # position of the searched note is being called
     z = notation[ind]                                       # the note at position ind (before:y) is being called
     return z
 
 
-def show_note(y):
-    if y == notation[y]:
-        n = notation[y][1]
-        o = notation[y][2]
-        return n, o
+def return_midi_note(note, octave):
+    ind = get_note(note, octave)
+    z = notation[ind]
+    t = z[0]
+    return t

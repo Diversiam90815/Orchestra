@@ -13,14 +13,16 @@ def select_instrument(section, instrument):                             # select
 
 def get_range(section, instrument):                                     # get instrument range
     current_instr = Instruments.all_instruments[section][instrument]
-    current_range = current_instr["Range"].split(" - ")
-
+    current_range = current_instr["Range"]
     return current_range
 
 
 def get_qualities(section, instrument):                                 # get instrument qualities
     current_instr = Instruments.all_instruments[section][instrument]
-    current_qualities = current_instr["Qualities"]
+    current_quality = current_instr["Qualities"]
+    current_qualities = []
+    for key, value in current_quality.items():
+        current_qualities.append(f'{key} -> {value}\n')
     return current_qualities
 
 

@@ -20,9 +20,12 @@ def get_range(section, instrument):                                     # get in
 def get_qualities(section, instrument):                                 # get instrument qualities
     current_instr = Instruments.all_instruments[section][instrument]
     current_quality = current_instr["Qualities"]
-    current_qualities = []
-    for key, value in current_quality.items():
-        current_qualities.append(f'{key} -> {value}\n')
+    try:
+        current_qualities = []
+        for key, value in current_quality.items():
+            current_qualities.append(f'{key} -> {value}\n')
+    except:
+        current_qualities = current_quality                             # contrabassoon has not a dict, which leads to a bug
     return current_qualities
 
 

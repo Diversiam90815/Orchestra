@@ -13,7 +13,7 @@ root.grid()
 instr = tk.Frame(root)
 instr.grid()
 
-txw = 60                            # setting the text box width
+txw = 70                            # setting the text box width
 txh = 10                            # setting the text box height
 
 style = ttk.Style()

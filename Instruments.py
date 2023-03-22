@@ -40,7 +40,8 @@ all_instruments = {
                             f'String {ret("C", 3)}': "most characteristic viola sound; somber, austere, sometimes a bit forbidding",
                             f'String {ret("G", 3)}': "dark",
                             f'String {ret("D", 4)}': "dark",
-                            f'String {ret("A", 4)}': "piercing and nasal; combines beautifully with woodwinds ( in some cases also with soft trumpet and trombones)"
+                            f'String {ret("A", 4)}': "piercing and nasal; combines beautifully with woodwinds \n"
+                                                     "(in some cases also with soft trumpet and trombones)"
                         },
                     "Transposition": "None",
                     "Roles": "often used to double the bassline or "
@@ -167,7 +168,7 @@ all_instruments = {
                             f'{ret("G#", 3)}- {ret("F", 4)}': "softer and brighter"
                         },
                     "Transposition": "None",
-                    "Roles": "similar to the tuba and b.trombone, yet not as metallic as the b.trombone "
+                    "Roles": "similar to the tuba and b.trombone, yet not as metallic as the b.trombone\n"
                              "and not as sluggish as the tuba (esp. in the lows);\n"
                              "mixes nicely with trombones and trumpets, horns, tuba and the contrabassoon"
                 },
@@ -186,7 +187,7 @@ all_instruments = {
                     "Transposition": "None",
                     "Roles": "can play lyrical soft lines as well;\n"
                              "sometimes 2 tubas to compensate of the oversized horn / trumpet sections;\n"
-                             "mixes nicely with trumpets and horns sluggish in the lows, "
+                             "mixes nicely with trumpets and horns sluggish in the lows, \n"
                              "but very agile in the middle and up"
                 }
         },
@@ -326,7 +327,80 @@ all_instruments = {
                              "in its higher register it's a lot paler and weaker than the bassoon;\n"
                              "needs periodic rests due to its size"
                 }
+        },
+    "Percussion":
+        {
+            "harp":
+                {
+                    "Range": f'{ret("B", 1)} - {ret("F#", 7)}',
+                    "RangeM_low": f'{retM("B", 1)}',
+                    "RangeM_high": f'{retM("F#", 7)}',
+                    "Qualities":
+                        {
+                            f'{ret("B", 1)} - {ret("B", 3)}': "dark, sonorous",
+                            f'{ret("C", 3)} - {ret("C", 5)}': "rich, warm",
+                            f'{ret("C#", 5)} - {ret("F#", 7)}': "bright, clear, not much dynamic range",
+                        },
+                    "Transposition": "None",
+                    "Roles": f'Sometimes 2 harps are used;\n'
+                             f'chords with 4 notes in each hand;\n'
+                             f'pedals: DCB/EFGA;\n'
+                             f'pres-de-la-table -> near the board -> creates a guitar like sound;\n'
+                             f'bisbigliando (transl.: whispering) -> alternating picking;\n'
+                             f'glissando -> heavenly sound'
+                },
+
+            "celeste":
+                {
+                    "Range": f'{ret("C", 3)} - {ret("C", 8)}',
+                    "RangeM_low": f'{retM("C", 3)}',
+                    "RangeM_high": f'{retM("C", 8)}',
+                    "Qualities": f'silvery, glistening, ethereal, sweet, shimmering;\n'
+                                 f'the timbre is homogenous across the pitches;\n'
+                                 f'sounding warmer and rounder than the glockenspiel;\n'
+                                 f'sound is not load -> gets covered easily by the orchestra;\n'
+                                 f'though it is touch-responsive, the dynamic range is limited',
+                    "Transposition": "None",
+                    "Roles": "provides highlights in form of chords or single notes \n"
+                             "(similar to triangle/glockenspiel);\n"
+                             "doubling other voices in (multiple) octaves, unison or fifth;\n"
+                             "piano figures consisting of glissando-like scales, arpeggios or octave tremolos"
+                },
+
+            "timpani":
+                {
+                    "Range": f'{ret("B", 1)} - {ret("C", 4)}',
+                    "RangeM_low": f'{retM("B", 1)}',
+                    "RangeM_high": f'{retM("C", 4)}',
+                    "Qualities": f'dull, thunderous, deep, heavy, velvety, dry;\n'
+                                 f'great dynamic range;\n'
+                                 f'timbre is determined by the mallet, where the head is struck and how hard',
+                    "Transposition": "None",
+                    "Roles": "doubled in unison with other bass instruments creates a homogeneous blend;\n"
+                             "blends nicely with trumpets and horns (e.g. 2 horns + timpani in \n"
+                             "unison with other horns in octaves and trumpets in 2 octaves playing the root;\n"
+                             "timpani rolls doubled with string tremolo chords have a tremendous effect;\n"
+                             "mixes nicely with pizz. strings and harps "
+                },
+
+            "marimba":
+                {
+                    "Range": f'{ret("C", 2)} - {ret("C", 7)}',
+                    "RangeM_low": f'{retM("C", 2)}',
+                    "RangeM_high": f'{retM("C", 7)}',
+                    "Qualities": f'dark, mellow,gentle, melodious, resonant;\n'
+                                 f'sound depends on the mallet: the harder the mallet, the louder the initial attack,\n'
+                                 f'and the more prominent the higher partials',
+                    "Transposition": "None",
+                    "Roles": "with percussion -> full sounding with celeste and glockenspiel in octaves or unison;\n"
+                             "with brass -> as an accompaniment to trumpet melodies;\n"
+                             "with woodwinds -> mellow-sounding and sonorous, blends well in octaves,\n"
+                             " especially with deep clarinets;\n"
+                             "with strings -> full-sounding in unison and octaves with low strings,\n"
+                             " yet blend is incomplete"
+                },
         }
+
     }
 
 # ## Techniques

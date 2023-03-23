@@ -34,40 +34,38 @@ for note in notes:
         break
 
 
-def get_note(note, octave):
+def get_note(note1, octave):
     """Returns the index of the given note in the notation list."""
-    y = 0
     for y in range(len(notation)):
-        if notation[y][1] == note \
+        if notation[y][1] == note1 \
                 and notation[y][2] == octave:               # input note/octave is going through the list until matched
             return y
 
 
-def return_note(note, octave):
+def return_note(note2, octave):
     """Returns only the note name and the corresponding octave as a string value."""
-    asd = get_note(note, octave)
-    note1 = notation[asd]
-    n = note1[1]
-    o = note1[2]
+    asd = get_note(note2, octave)
+    note_i = notation[asd]
+    n = note_i[1]
+    o = note_i[2]
     return f'{n}{o}'
 
 
-def return_midi_note(note, octave):
+def return_midi_note(note2, octave):
     """Returns the MIDI note value from a given note name and octave."""
-    ind = get_note(note, octave)
-    z = notation[ind]
-    t = z[0]
+    ind = get_note(note2, octave)
+    p = notation[ind]
+    t = p[0]
     return t
 
 
 def get_note_from_midi(mid):
     """Returns the note name and octave number as a string from a given MIDI note value."""
-    y = 0
     for y in range(len(notation)):
         if notation[y][0] == mid:
-            note = notation[y][1]
+            note4 = notation[y][1]
             octave = notation[y][2]
-            return f'{note}{octave}'
+            return f'{note4}{octave}'
 
 
 def set_xticks_labels():
@@ -86,6 +84,6 @@ def set_x_axis():
     x_values = set_xticks_labels()
     x_names = []
     for value in x_values:
-        z = get_note_from_midi(value)
-        x_names.append(z)
+        z1 = get_note_from_midi(value)
+        x_names.append(z1)
     return x_names

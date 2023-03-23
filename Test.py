@@ -19,4 +19,3 @@ test (by e.g. printing statements) can be accomplished without ease.
 #
 # z = Additional_Functions.return_midi_note("A#", 1)
 # print(z)
-

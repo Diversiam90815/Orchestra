@@ -1,10 +1,12 @@
 from Additional_Functions import return_note as ret
 from Additional_Functions import return_midi_note as retM
-'''
-This is a collection of all instruments of a typical symphonic orchestra. This is a CIP (continual improvement process),
-which means instruments will be added over time as this project grows. 
 
-The instruments and their data are collected in nested dictionaries. 
+'''
+This is a collection of all instruments of a typical symphonic orchestra. This is a CIP (continual improvement project),
+which means instruments and other features will be added over time as this project grows. 
+
+The instruments and their data are collected in nested dictionaries (when applicable). To leave this document "clean", 
+the relevant functions have been outsourced to the module 'Additional Functions'. 
 
 The pitches are written pitches, except for the Transposition key (which shows the sounding pitches accordingly).
 
@@ -37,15 +39,17 @@ all_instruments = {
                     "RangeM_high": f'{retM("E", 6)}',
                     "Qualities":
                         {
-                            f'String {ret("C", 3)}': "most characteristic viola sound; somber, austere, sometimes a bit forbidding",
+                            f'String {ret("C", 3)}': "most characteristic viola sound; somber,\n"
+                                                     "  austere, sometimes a bit forbidding",
                             f'String {ret("G", 3)}': "dark",
                             f'String {ret("D", 4)}': "dark",
                             f'String {ret("A", 4)}': "piercing and nasal; combines beautifully with woodwinds \n"
-                                                     "(in some cases also with soft trumpet and trombones)"
+                                                     "  (in some cases also with soft trumpet and trombones)"
                         },
                     "Transposition": "None",
                     "Roles": "often used to double the bassline or "
-                             "fill the harmony in the center (often coupling 2nd Violins)"
+                             "  fill the harmony in the center\n"
+                             "(often coupling 2nd Violins)"
                 },
 
             "violoncello":
@@ -57,12 +61,13 @@ all_instruments = {
                         {
                             f'String {ret("C", 2)}': "richly, sonorous bass",
                             f'String {ret("G", 2)}': "least strong, carries less well than the others",
-                            f'String {ret("D", 3)}': "the most musically captivating, exuding warm and lyrical quality",
+                            f'String {ret("D", 3)}': "the most musically captivating, exuding warm and \n"
+                                                     "  lyrical quality",
                             f'String {ret("A", 4)}': "most brilliant and piercing"
                         },
                     "Transposition": "None",
-                    "Roles": "often doubled with: bassoon, double bass, horns, clarinet, trombone, tuba "
-                             "or pizz. cello with Timpani"
+                    "Roles": "often doubled with: bassoon, double bass, horns, clarinet,\n"
+                             "  trombone, tuba or pizz. cello with Timpani"
                 },
 
             "double_bass":
@@ -71,7 +76,6 @@ all_instruments = {
                              f'(with C-extension: {ret("C", 2)} - {ret("C", 5)})',
                     "RangeM_low": f'{retM("C", 1)}',
                     "RangeM_high": f'{retM("C", 4)}',
-                    "Tuning": "E-A-D-G",
                     "Qualities":
                         {
                             f'String {ret("E", 2)}': "weighty, dark, powerful -> sonorous fundamental bass",
@@ -79,7 +83,7 @@ all_instruments = {
                             f'String {ret("D", 3)}': "shares cellos range, but fuller, more powerful and darker",
                             f'String {ret("G", 3)}': "shares cellos range, but fuller, more powerful and darker"
                         },
-                    "Transposition": f'One octave lower {ret("E", 1)} - {ret("C", 4)}',
+                    "Transposition": f'One octave lower: {ret("E", 1)} - {ret("C", 4)}',
                     "Roles": "often identical to Cello part (esp. mid 18th century)"
                 }
         },
@@ -116,8 +120,8 @@ all_instruments = {
                             f'{ret("B", 5)} - {ret("D", 6)}': "brilliant, but shrill"
                         },
                     "Transposition": f'C: as written;\nBb: Maj2nd lower: {ret("E", 3)} - {ret("C", 6)}',
-                    "Roles": "most agile of the brass choir;\n "
-                             "creates an aura of anticipation and excitement;\n "
+                    "Roles": "most agile of the brass choir;\n"
+                             "creates an aura of anticipation and excitement;\n"
                              "often doubled in oboe & timpani"
                 },
 
@@ -133,8 +137,9 @@ all_instruments = {
                             f'{ret("G", 4)} - {ret("A#", 4)}': "very intense"
                         },
                     "Transposition": "None",
-                    "Roles": f'notes below {ret("G#", 3)} are only available in 1st position '
-                             "-> fast changing positions are difficult, if positions are extreme;\n"
+                    "Roles": f'notes below {ret("G#", 3)} are only available in 1st position\n'
+                             "  -> fast changing positions are difficult,\n"
+                             "  if the positions are extreme;\n"
                              "can play glissandi very well;\n"
                              "great for harmony, contrapuntal lines or doubling"
                 },
@@ -152,8 +157,9 @@ all_instruments = {
                         },
                     "Transposition": "None",
                     "Roles": "can be light & delicate, or hard & menacing;\n"
-                             "pedal tones(lowest harmonic) are easier than on the tenor trombone;\n"
-                             "contrabass trombone is hard to play and today its parts are mostly assigned to the tuba"
+                             "pedal tones (lowest harmonic) are easier than on the tenor trombone;\n"
+                             "contrabass trombone is hard to play and today its parts\n"
+                             "  are mostly assigned to the tuba"
                 },
 
             "cimbasso":
@@ -168,9 +174,11 @@ all_instruments = {
                             f'{ret("G#", 3)}- {ret("F", 4)}': "softer and brighter"
                         },
                     "Transposition": "None",
-                    "Roles": "similar to the tuba and b.trombone, yet not as metallic as the b.trombone\n"
-                             "and not as sluggish as the tuba (esp. in the lows);\n"
-                             "mixes nicely with trombones and trumpets, horns, tuba and the contrabassoon"
+                    "Roles": "similar to the tuba and b.trombone,yet not as \n"
+                             "  metallic as the b.trombone and not as sluggish\n"
+                             "  as the tuba (esp. in the lows);\n"
+                             "mixes nicely with trombones and trumpets, horns, tuba and the \n"
+                             "  contrabassoon"
                 },
 
             "tuba":
@@ -186,7 +194,8 @@ all_instruments = {
                         },
                     "Transposition": "None",
                     "Roles": "can play lyrical soft lines as well;\n"
-                             "sometimes 2 tubas to compensate of the oversized horn / trumpet sections;\n"
+                             "sometimes 2 tubas to compensate of the oversized \n"
+                             "  horn / trumpet sections;\n"
                              "mixes nicely with trumpets and horns sluggish in the lows, \n"
                              "but very agile in the middle and up"
                 }
@@ -206,7 +215,7 @@ all_instruments = {
                             f'{ret("A", 5)} - {ret("G", 6)}': "bright & clear",
                             f'{ret("A", 6)} - {ret("C", 7)}': "shrill, edgy"
                         },
-                    "Transposition": f'one octave higher {ret("D", 5)} - {ret("C", 8)}',
+                    "Transposition": f'one octave higher: {ret("D", 5)} - {ret("C", 8)}',
                     "Roles": "--"
                 },
 
@@ -256,13 +265,14 @@ all_instruments = {
                         },
                     "Transposition": f'P5th lower: {ret("E", 2)} - {ret("C", 6)}',
                     "Roles": "melancholic touch, most used for sadness;\n"
-                             "much more mellow than the oboe -> does not cut through as easily as the oboe"
+                             "much more mellow than the oboe -> does not cut through \n"
+                             " as easily as the oboe"
                 },
 
             "clarinet":
                 {
                     "Range": f'{ret("E", 3)} - {ret("C", 7)}',
-                    "RangeM_low": f'{retM("D", 3)}',                                                    # here: Bb Clarinet
+                    "RangeM_low": f'{retM("D", 3)}',  # here: Bb Clarinet
                     "RangeM_high": f'{retM("B", 6)}',
                     "Qualities":
                         {
@@ -271,7 +281,7 @@ all_instruments = {
                             f'{ret("B", 4)} - {ret("C", 6)}': "Clarino Register: bright, incisive, expressive",
                             f'{ret("D", 6)} - {ret("C", 7)}': "shrill, piercing"
                         },
-                    "Transposition": f'Bb: Maj2 lower: {ret("D", 3)} - {ret("B", 6)};\n'
+                    "Transposition": f'Bb: Maj2nd lower: {ret("D", 3)} - {ret("B", 6)};\n'
                                      f'A: min3rd lower: {ret("C#", 3)} - {ret("A#", 6)}',
                     "Roles": f'homogenous across all pitches-dynamics;\n'
                              f'fingering break between: {ret("A#", 4)} - {ret("B", 4)};\n'
@@ -311,7 +321,8 @@ all_instruments = {
                         },
                     "Transposition": "None",
                     "Roles": "often in unison with the clarinet;\n"
-                             "lowest & highest P5 intervals are quite difficult/not playable at low dynamics"
+                             "lowest & highest P5 intervals are quite difficult/not playable \n"
+                             " at low dynamics"
                 },
 
             "contrabassoon":
@@ -319,8 +330,8 @@ all_instruments = {
                     "Range": f'{ret("A#", 1)} - {ret("A#", 4)}',
                     "RangeM_low": f'{retM("A#", 0)}',
                     "RangeM_high": f'{retM("A#", 3)}',
-                    "Qualities": f'similar characteristics as the bassoon, but slower and more stubborn '
-                                 f'and resistant in the lows;\n'
+                    "Qualities": f'similar characteristics as the bassoon, but slower and more \n'
+                                 f' stubborn and resistant in the lows;\n'
                                  f'most effective range is its lowest 12th: {ret("A#", 1)} - {ret("F", 3)}',
                     "Transposition": f'Octave lower: {ret("A#", 0)} - {ret("A#", 3)}',
                     "Roles": "often doubled with double basses & bassoons / celli at octave;\n"
@@ -364,7 +375,8 @@ all_instruments = {
                     "Roles": "provides highlights in form of chords or single notes \n"
                              "(similar to triangle/glockenspiel);\n"
                              "doubling other voices in (multiple) octaves, unison or fifth;\n"
-                             "piano figures consisting of glissando-like scales, arpeggios or octave tremolos"
+                             "piano figures consisting of glissando-like scales, arpeggios or \n"
+                             "  octave tremolos"
                 },
 
             "timpani":
@@ -374,12 +386,16 @@ all_instruments = {
                     "RangeM_high": f'{retM("C", 4)}',
                     "Qualities": f'dull, thunderous, deep, heavy, velvety, dry;\n'
                                  f'great dynamic range;\n'
-                                 f'timbre is determined by the mallet, where the head is struck and how hard',
+                                 f'timbre is determined by the mallet, where the head is struck\n'
+                                 f' and how hard',
                     "Transposition": "None",
-                    "Roles": "doubled in unison with other bass instruments creates a homogeneous blend;\n"
-                             "blends nicely with trumpets and horns (e.g. 2 horns + timpani in \n"
-                             "unison with other horns in octaves and trumpets in 2 octaves playing the root;\n"
-                             "timpani rolls doubled with string tremolo chords have a tremendous effect;\n"
+                    "Roles": "doubled in unison with other bass instruments creates a \n"
+                             "  homogeneous blend;\n"
+                             "blends nicely with trumpets and horns (e.g. 2 horns + \n"
+                             "  timpani in unison with other horns in octaves and \n"
+                             "  trumpets in 2 octaves playing the root;\n"
+                             "timpani rolls doubled with string tremolo chords have a \n"
+                             "  tremendous effect;\n"
                              "mixes nicely with pizz. strings and harps "
                 },
 
@@ -389,24 +405,31 @@ all_instruments = {
                     "RangeM_low": f'{retM("C", 2)}',
                     "RangeM_high": f'{retM("C", 7)}',
                     "Qualities": f'dark, mellow,gentle, melodious, resonant;\n'
-                                 f'sound depends on the mallet: the harder the mallet, the louder the initial attack,\n'
-                                 f'and the more prominent the higher partials',
+                                 f'sound depends on the mallet: the harder the mallet, the louder the\n'
+                                 f' initial attack, and the more prominent the higher partials',
                     "Transposition": "None",
-                    "Roles": "with percussion -> full sounding with celeste and glockenspiel in octaves or unison;\n"
+                    "Roles": "with percussion -> full sounding with celeste and glockenspiel \n"
+                             "  in octaves or unison;\n"
                              "with brass -> as an accompaniment to trumpet melodies;\n"
-                             "with woodwinds -> mellow-sounding and sonorous, blends well in octaves,\n"
-                             " especially with deep clarinets;\n"
+                             "with woodwinds -> mellow-sounding and sonorous, blends well \n"
+                             "  in octaves, especially with deep clarinets;\n"
                              "with strings -> full-sounding in unison and octaves with low strings,\n"
-                             " yet blend is incomplete"
+                             "  yet blend is incomplete"
                 },
         }
 
     }
 
-# ## Techniques
-# Strings
-#     Techniques:             sul tasto  = light/easy
-#                             sul pont   = harsh/aggressive
-#                             down-bows   = heavier
-#                             up-bows     = lighter
-#
+"""
+Adding the techniques section is planned for a further implementation. Below are some unsorted fragments, which would
+be used at a later version of the program. 
+
+
+Techniques
+
+Strings
+    Techniques:             sul tasto  = light/easy
+                            sul pont   = harsh/aggressive
+                            down-bows   = heavier
+                            up-bows     = lighter
+"""

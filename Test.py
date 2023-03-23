@@ -1,23 +1,22 @@
 import Functions
 import Instruments
+import Plot
 import Additional_Functions
 
 '''
-This is just for testing purposes.
+This is just for testing purposes in order to keep the original code clean. All other modules are imported, so a quick
+test (by e.g. printing statements) can be accomplished without ease. 
 
 '''
 
-
-# z = Functions.get_range("Brass", "french_horn")
-# b = tuple(z[0].strip("()").split(","))
-# print(b[1], b[2])
 
 # c = Additional_Functions.return_note("E", 3)
 # print(c)
 #
-# z= Functions.get_qualities("Woodwinds", "clarinet")
-# print(z, type(z))
+# y = Functions.get_qualities("Woodwinds", "clarinet")
+# print(y, type(y))
 #
 #
 # z = Additional_Functions.return_midi_note("A#", 1)
 # print(z)
+

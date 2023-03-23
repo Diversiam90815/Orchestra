@@ -1,6 +1,6 @@
 import Instruments
 '''
-These are functions retrieving data from the Instruments file and returning each key value of each instrument
+These are functions retrieving data from the Instruments.py file and returning each key value of each instrument
 as well as a whole section. 
 
 '''

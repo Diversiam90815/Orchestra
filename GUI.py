@@ -9,7 +9,8 @@ import Instruments
 """
 This module is dedicated towards the GUI creation of the program using Tkinter. The GUI is divided into two main section:
 The information panel and the plot. Each can be controlled separately. The code is designed in a way, which makes adding
-new instruments easy. 
+new instruments easy.  The window is bigger than currently needed. Future features will have enough place there, like
+e.g. a MIDI import and analyze functionality.
 
 The information panel presents selective information
 of each selected instrument. One can select the instrument via a dedicated menu at the top.

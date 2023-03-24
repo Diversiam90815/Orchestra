@@ -31,59 +31,80 @@ class Plot:
         self.figure.tight_layout()
         self.figure.subplots_adjust(left=0.17)                                              # the plot position has to be adjusted for the instruments to show
         self.axes.set_xticks(adf.set_xticks_labels(), adf.set_x_axis())                     # set the corresponding note names as labels at each octave
+        self.axes.yaxis.set_visible(False)                                                  # y axis won't show any labels, when nothing is plotted
 
     def plot_strings(self):
         """Plots the ranges of the instruments of the String choir."""
+        string_instruments1 = []
+        self.axes.yaxis.set_visible(True)
         filt_string = self.data["Section"] == "Strings"
         String_instruments = self.data.loc[filt_string, "Instrument"]
+        for instr12 in String_instruments:                                                  # appending y labels in a list
+            instr12 = instr12.replace("_", " ").title()                                     # so I can format them into a better style
+            string_instruments1.append(instr12)
         Left_val_string = self.data.loc[filt_string, "Range_low"]                           # horizontal bar is fixed on the left_val
         Right_val_string = self.data.loc[filt_string, "Range_high"]
         self.data["width_strings"] = Right_val_string - Left_val_string                     # and the width is added to get to the right_val
         data_strings_width = self.data["width_strings"].dropna()                            # Deletes empty entries, which would cause problems during plotting due to a mismatch
 
-        self.axes.barh(String_instruments, data_strings_width, left=Left_val_string,
+        self.axes.barh(string_instruments1, data_strings_width, left=Left_val_string,
                        height=0.5, color="blue", edgecolor='black')
         self.axes.set_xticks(adf.set_xticks_labels(), adf.set_x_axis())
         self.c1.draw()
 
     def plot_woods(self):
         """Plots the ranges of the instruments from the Woodwind choir."""
+        woods_instruments1 = []
+        self.axes.yaxis.set_visible(True)
         filt_woods = self.data["Section"] == "Woodwinds"
         Woodwind_instruments = self.data.loc[filt_woods, "Instrument"]
+        for instr13 in Woodwind_instruments:
+            instr13 = instr13.replace("_", " ").title()
+            woods_instruments1.append(instr13)
         Left_val_woods = self.data.loc[filt_woods, "Range_low"]
         Right_val_woods = self.data.loc[filt_woods, "Range_high"]
         self.data["width_woods"] = Right_val_woods - Left_val_woods
         data_woods_width = self.data["width_woods"].dropna()
 
-        self.axes.barh(Woodwind_instruments, data_woods_width, left=Left_val_woods,
+        self.axes.barh(woods_instruments1, data_woods_width, left=Left_val_woods,
                        height=0.5, color="green", edgecolor='black')
         self.axes.set_xticks(adf.set_xticks_labels(), adf.set_x_axis())
         self.c1.draw()
 
     def plot_brass(self):
         """Plots the ranges of the instruments from the Brass choir."""
+        brass_instruments1 = []
+        self.axes.yaxis.set_visible(True)
         filt_brass = self.data["Section"] == "Brass"
         Brass_instruments = self.data.loc[filt_brass, "Instrument"]
+        for instr14 in Brass_instruments:
+            instr14 = instr14.replace("_", " ").title()
+            brass_instruments1.append(instr14)
         Left_val_brass = self.data.loc[filt_brass, "Range_low"]
         Right_val_brass = self.data.loc[filt_brass, "Range_high"]
         self.data["width_brass"] = Right_val_brass - Left_val_brass
         data_brass_width = self.data["width_brass"].dropna()
 
-        self.axes.barh(Brass_instruments, data_brass_width, left=Left_val_brass,
+        self.axes.barh(brass_instruments1, data_brass_width, left=Left_val_brass,
                        height=0.5, color="yellow", edgecolor='black')
         self.axes.set_xticks(adf.set_xticks_labels(), adf.set_x_axis())
         self.c1.draw()
 
     def plot_perc(self):
         """Plots the ranges of the instruments from the Percussion choir."""
+        perc_instruments1 = []
+        self.axes.yaxis.set_visible(True)
         filt_perc = self.data["Section"] == "Percussion"
         Perc_instruments = self.data.loc[filt_perc, "Instrument"]
+        for instr15 in Perc_instruments:
+            instr15 = instr15.replace("_", " ").title()
+            perc_instruments1.append(instr15)
         Left_val_perc = self.data.loc[filt_perc, "Range_low"]
         Right_val_perc = self.data.loc[filt_perc, "Range_high"]
         self.data["width_perc"] = Right_val_perc - Left_val_perc
         data_perc_width = self.data["width_perc"].dropna()
 
-        self.axes.barh(Perc_instruments, data_perc_width, left=Left_val_perc,
+        self.axes.barh(perc_instruments1, data_perc_width, left=Left_val_perc,
                        height=0.5, color="red", edgecolor='black')
         self.axes.set_xticks(adf.set_xticks_labels(), adf.set_x_axis())
         self.c1.draw()
@@ -98,6 +119,7 @@ class Plot:
 
     def clearplot(self):
         """Clears the existing sections."""
+        self.axes.yaxis.set_visible(False)
         self.axes.cla()
         self.axes.set_xlim(21, 108, auto=False)
         self.axes.grid(visible=True, axis='x')
